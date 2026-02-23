@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-7</title>
+</head>
+
+<body>
+    <h4>Create a webpage using HTML only that demonstrates the use of
+        different types of lists. Display an unordered list showing at least
+        five favorite subjects or skills and an ordered list showing three
+        daily activities or steps of a process. Also include a description list
+        (&lt;dl&gt;) with at least two terms and their corresponding descriptions.
+        Demonstrate list nesting by placing one list inside another and as a
+        mini challenge, change the list style using the type attribute and
+        create a mixed list where an unordered list is placed inside an
+        ordered list.
+    </h4>
+
+    <h1>HTML Lists Demonstration</h1>
+    <h2>Favorite Subjects / Skills</h2>
+    <!-- ul is used to create an unordered list.li is used to define each list item.circle is used to create circular bullets -->
+    <ul type="circle">
+        <li>Web Development</li>
+        <li>Python Programming</li>
+        <li>Object Oriented Programming</li>
+        <li>AI / ML</li>
+        <li>Database Management</li>
+    </ul>
+
+    <h2>Daily Activities</h2>
+    <!-- ol is used to create an ordered list. -->
+    <ol >
+        <li>Wake up early</li>
+        <li>Have breakfast</li>
+        <li>Practice coding</li>
+    </ol>
+
+    <h2>Description List</h2>
+    <!-- dl is used to create a description list.dt is used to define each term.dd is used to describe each term. -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language used to structure web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets used to style web pages.</dd>
+    </dl>
+
+    <!-- Nested List -->
+    <h2>Nested List Example</h2>
+    <ul>
+        <li>First Semister Subjects
+            <ul type="circle">
+                <li>Physics</li>
+                <li>C Programming</li>
+                <li>Math-I</li>
+            </ul>
+        </li>
+        <li>Second Semister Subjects
+            <ul type="disc">
+                <li>Chemistry</li>
+                <li>Math-II</li>
+                <li>Object Oriented Programming</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Mixed List: Unordered inside Ordered -->
+    <h2>Steps to Become a Web Developer</h2>
+    <ol type="A">
+        <li>Frontend Development
+            <ul type="disc">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </li>
+        <li>Backend Development
+            <ul type="disc">
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Ruby</li>
+            </ul>
+        </li>
+        <li>Build Projects</li>
+    </ol>
+
+</body>
+
+</html>
