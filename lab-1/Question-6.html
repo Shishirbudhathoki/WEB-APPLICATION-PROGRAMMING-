@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            position: sticky;
+            /* top sets how far from the top of the viewport the element should “stick”. */
+            top: calc(20px * 2 + 1.6em * 4);
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            scroll-margin-top: 200px;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <header >
+        <h4>Create a multi-section webpage using semantic HTML elements
+            only. The webpage should include a &lt;header&gt; section containing
+            the title of the website, a &lt;nav&gt; section with navigation links,
+            multiple &lt;section&gt; elements for different content areas, and a
+            &lt;footer&gt; section for footer information. Each navigation link should
+            use anchor tags (&lt;a&gt;) to scroll to its corresponding section using
+            section id attributes. Ensure proper use of semantic tags,
+            meaningful section headings, and well-structured HTML code.
+            Navigation between sections should work correctly when the links
+            are clicked.
+        </h4>
+
+    </header>
+    <!-- href is used to link different sections of the webpage. -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            We are a technology-focused institute dedicated to providing
+            high-quality digital solutions and professional training.
+            Our goal is to help individuals and organizations grow by
+            delivering innovative, reliable, and modern technology services.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>
+            We offer a wide range of technology services including
+            Web Development, Artificial Intelligence & Machine Learning,
+            UI/UX Design, and Software Development. Our expert team focuses
+            on creating user-friendly, scalable, and efficient digital solutions
+            tailored to client requirements.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Get in touch with us to learn more about our services or to start
+            your next project. You can contact us via email, phone, or visit
+            our institute for personalized consultation and support.
+        </p>
+    </section>
+
+    <footer>
+        <p>
+            Email: <a href="mailto:example@techinstitute.com">example@techinstitute.com</a><br>
+            Phone: +977-9800000000<br>
+            Address: Dharan, Nepal
+        </p>
+        <p>
+            &copy; 2026 Tech Institute. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
