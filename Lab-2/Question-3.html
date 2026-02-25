@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+    <link rel="stylesheet" href="Question-3.css">
+</head>
+
+<body>
+    <header>
+        <h4>
+            Create a webpage that demonstrates CSS positioning and display properties. Use different elements and apply
+            static, relative, absolute, fixed, and sticky positioning. Apply display values such as block, inline,
+            inline-block, and none. Use z-index to show overlapping elements and apply overflow properties such as
+            hidden, scroll, and auto where necessary.
+        </h4>
+    </header>
+    <main>
+        <div class="sticky-box">Sticky (top-right)</div>
+        <div class="container">
+            <section class="position-demo">
+                <div>
+                    <h2>Position Examples</h2>
+                    <div class="static-box">Static position</div>
+                    <div class="relative-box">Relative position</div>
+                    <div class="absolute-box">Absolute (inside container)</div>
+                </div>
+            </section>
+            <div class="overflow-container">
+                <div class="overflow hidden">
+                    <b>Overflow Hidden:</b> Extra content is hidden. Extra content is hidden. Extra content is hidden.
+                    Extra content is hidden. Extra content is hidden. Extra content is hidden. Extra content is hidden.
+                    Extra content is hidden. Extra content is hidden. Extra content is hidden. Extra content is hidden.
+                </div>
+                <div class="overflow scroll">
+                    <b>Overflow Scroll:</b> Extra content is scrollable. Extra content is scrollable. Extra content is
+                    scrollable. Extra content is scrollable. Extra content is scrollable. Extra content is scrollable.
+                    Extra content is scrollable. Extra content is scrollable. Extra content is scrollable. Extra content
+                    is scrollable. Extra content is scrollable. Extra content is scrollable. Extra content is
+                    scrollable. Extra content is scrollable. Extra content is scrollable.
+                </div>
+                <div class="overflow auto">
+                    <b>Overflow Auto:</b> Scroll appears only if needed. Scroll appears only if needed. Scroll appears
+                    only if needed. Scroll appears only if needed. Scroll appears only if needed. Scroll appears only if
+                    needed. Scroll appears only if needed. Scroll appears only if needed. Scroll appears only if needed.
+                    Scroll appears only if needed.
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>Display Properties</h2>
+
+            <!-- Block takes the full width available,Starts on a new line,You can set width & height -->
+            <div class="block">Block Element</div>
+
+            <!-- Takes only as much width as its content,Stays on the same line,You cannot set width or height -->
+            <span class="inline">Inline Element</span>
+            <span class="inline">Inline Element</span>
+
+            <!-- Behaves like inline (same line),Behaves like block (width & height allowed) -->
+            <div class="inline-block">Inline-Block</div>
+            <div class="inline-block">Inline-Block</div>
+
+            <!-- Removes the element completely,Takes no space,Invisible & non-existent in layout -->
+            <div class="none">This text is hidden (display: none)</div>
+        </section>
+
+        <section>
+            <div class="z-container">
+                <h2>Z-Index (Overlapping)</h2>
+                <div class="z-box z1">z-index: 1</div>
+                <div class="z-box z2">z-index: 2</div>
+                <div class="z-box z3">z-index: 3</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

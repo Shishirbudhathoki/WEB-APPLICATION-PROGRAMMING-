@@ -1,0 +1,169 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    background-color: aquamarine;
+    /* Fixed = always visible, floats relative to the screen, ignores scrolling. */
+    position: fixed;
+    z-index: 999;
+}
+main{
+    background-color: bisque;
+    padding-top: 75px;
+}
+
+.block {
+    display: block;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.inline {
+    display: inline;
+    background-color: lightcoral;
+    padding: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: green;
+    text-align: center;
+    line-height: 40px;
+}
+
+.none {
+    display: none;
+}
+
+/* ================= Z-INDEX ================= */
+.z-container {
+    position: relative;
+    height: 180px; 
+    border: 2px solid black;
+    padding-bottom: 30px;
+}
+
+.z-box {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+.z1 {
+    background-color: blue;
+    top: 40px;
+    left: 40px;
+    /* z-index controls the stacking order of overlapping elements; higher values appear on top. */
+    z-index: 1;
+}
+
+.z2 {
+    background-color: green;
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}
+
+.z3 {
+    background-color: purple;
+    top: 80px;
+    left:80px;
+    z-index: 3;
+}
+.container{
+    height: 245px;
+    display: flex;
+    flex-direction: row;
+}
+.position-demo {
+    position: relative;
+    border: 2px solid black;
+    padding-left: 10px;
+    width: 480px;
+}
+.overflow-container{
+    display: flex;
+    flex-direction: row;
+    gap : 10px;
+    margin-left: 20px;
+    border: 2px solid black;
+    padding : 10px;
+}
+
+
+.static-box {
+    /* Static = normal flow, doesn’t move, ignores offsets. */
+    position: static;
+    background-color: rgb(100, 81, 81);
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+.relative-box {
+    /* Relative: Moves visually from its normal position, space is still reserved. */
+    position: relative;
+    top: 10px;
+    left: 60px;
+    height: 50px;
+    width: 200px;
+    background-color: orange;
+    padding: 10px;
+}
+
+.absolute-box {
+    /* Absolute: Floats anywhere relative to a positioned ancestor, original space is free. */
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    height: 50px;
+    width: 200px;
+    background-color: pink;
+    padding: 10px;
+}
+
+.sticky-box {
+    /* Sticky = relative until scroll → then it becomes fixed. */
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.overflow {
+    width: 210px;
+    height: 150px;
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    color : red;
+}
+
+.hidden {
+    /* hidden is used for clipping overflow content */
+    overflow: hidden;
+}
+
+.scroll {
+    /* scroll is used for scrollable overflow content */
+    overflow: scroll; 
+}
+
+.auto {
+    /* In auto mode, scroll appears only if content exceeds box */
+    overflow: auto;
+}
+
