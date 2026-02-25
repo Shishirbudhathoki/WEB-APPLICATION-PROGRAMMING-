@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    background-color: aquamarine;
+}
+.navbar{
+    background-color: lightcoral;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+nav ul li {
+    /* flex-grow : How much a flex item can expand to fill extra space. 1 means it grows equally compared to other items with flex-grow:1.*/
+    flex-grow: 1;
+    /* flex-shrink: How much a flex item can shrink when space is tight. */
+    flex-shrink: 1;
+    /* flex-basis: The initial size of a flex item before growing or shrinking. */
+    flex-basis: 100px;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    color: blue;
+}
+
+
+section{
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    min-width: 100px;  
+    max-width: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 120px;
+    background-color: lightblue;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;  
+}
+
