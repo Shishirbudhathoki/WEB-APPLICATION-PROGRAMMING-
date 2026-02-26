@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    background-color: aquamarine;
+}
+h2{
+    margin : 20px;
+}
+button {
+    background-color: rgb(61, 115, 165);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 20px;
+    transition: all 0.3s ease; 
+}
+
+button:hover {
+    background-color:rgb(3, 65, 122);
+    transform: scale(1.1); 
+}
+
+button:active {
+    transform: scale(0.95); 
+}
+
+button:focus {
+    outline: 3px solid rgb(255, 215, 0); 
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: rgb(40, 156, 129);
+    width : 200px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card::before {
+    content: "⭐";                  
+    position: absolute;
+    top: -25px;                     
+    left: 20%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: floatStar 3s ease-in-out infinite, rotateStar 5s linear infinite;
+
+}
+.card::after {
+    content: "⭐";                  
+    position: absolute;
+    top: -25px;                     
+    right: 20%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: floatStar 3s ease-in-out infinite, rotateStar 5s linear infinite;
+}
+
+@keyframes floatStar {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-15px); }
+}
+
+@keyframes rotateStar {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
