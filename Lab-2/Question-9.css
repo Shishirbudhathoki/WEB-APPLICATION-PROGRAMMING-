@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    background-color: aquamarine;
+}
+main {
+    background-color: #f0f4f8;
+    padding : 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #94a3b8;
+}
+
+thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* :nth-child(even) selects every even-numbered element among its siblings (2nd, 4th, 6th, etc.). */
+tbody tr:nth-child(even) {
+    background-color: #e0f2fe;
+}
+
+tbody tr:hover {
+    background-color: #bae6fd;
+}
+
