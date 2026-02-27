@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        main{
+            margin: 20px;
+        }
+
+        header {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+            background-color: aquamarine;
+        }
+
+        #inputListContainer {
+            display: none;
+        }
+
+        #add-item-btn {
+            background-color: rgb(74, 185, 74);
+            padding: 5px;
+        }
+
+        #remove-item-btn {
+            background-color: rgb(191, 19, 19);
+            color: white;
+            border-color: black;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        #inputListContainer {
+            background-color: rgb(78, 167, 167);
+            padding: 5px;
+            border-left: 5px red solid;
+        }
+        li {
+            margin : 10px;
+        }
+        li span {
+            background-color: yellow;
+            display: block;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Create a site that needs to have two buttons; one for adding an item into the list and another for removing the
+        last item from the list.
+    </header>
+    <main>
+        <h2>Dynamic List Controller</h2>
+        <button id="add-item-btn">Add Item</button>
+        <button id="remove-item-btn">Remove Last Item</button>
+
+        <div id="inputListContainer">
+            <label for="list-input">Type an item to insert into List: </label>
+            <input id="list-input" type="text" />
+            <button id="add-input-btn" type="button">ADD</button>
+        </div>
+        <ul id="list"></ul>
+    </main>
+
+</body>
+<script src="Question-1.js"></script>
+
+</html>
