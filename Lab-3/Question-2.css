@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #e8f0fe;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+form {
+    background-color: #ffffff;
+    width: 420px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+label {
+    font-weight: bold;
+    color: #1e293b;
+}
+
+#fullname,#course,
+#username,#email,
+#password,#age,
+#Confirmpass,#role{
+    width: 100%;
+    padding: 4px;
+    margin-top: 3px;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
+}
+
+.radio,#terms {
+    margin-right: 6px;
+}
+
+select {
+    cursor: pointer;
+}
+
+#submit{
+    width: 100%;
+    padding: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#submit:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#submit:active {
+    transform: scale(0.98);
+}
+#age-error{
+    color:red;
+    display:none;
+}
+
+input:focus:invalid,
+select:focus:invalid {
+    border-color: #dc2626;
+    box-shadow: 0 0 5px rgba(220,38,38,0.4);
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.invalid {
+    border: 2px solid red !important;
+}
