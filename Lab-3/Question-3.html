@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+    <link rel="stylesheet" href="Question-3.css">
+</head>
+
+<body>
+    <header>
+        Build a Dynamic Table that adds and deletes rows.
+    </header>
+    <main>
+        <div class="input-section">
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="number" id="ageInput" placeholder="Age">
+            <button onclick="addRow()">Add Row</button>
+        </div>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+
+    </main>
+    <script src="Question-3.js"></script>
+</body>
+
+</html>
