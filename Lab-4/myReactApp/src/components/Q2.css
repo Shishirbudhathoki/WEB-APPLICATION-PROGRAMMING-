@@ -1,0 +1,49 @@
+button {
+    background-color: white;
+    color: whitesmoke;
+    border : 2px solid black;
+    width: 100px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+input{
+    height : 40px;
+    width: 300px;
+    border : 1px solid black;
+    border-radius: 10px;
+    padding-inline: 10px;
+    color: blue;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    width : 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+}
+
+p{
+    color : red;
+    padding : 10px;
+    font-size: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+}

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+
+}
+.title {
+  margin-top: 30px;
+}
+
+.bulb-img {
+    height: 200px;
+    width: 200px;
+    margin: 20px 0;
+
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color : black;
+}
+
+.status {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+h1{
+    color : blue;
+}

@@ -1,0 +1,82 @@
+.parent-container {
+  max-width: 520px;
+  width: 100%;
+  /* margin: 0; */
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #0b47c1;
+  margin-left: 450px;
+}
+
+.parent-container h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  color : black;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  text-align: center;
+  color: #555;
+}
+
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.item-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: #0b47c1;
+}
+
+.item-input::placeholder {
+  color: #5a78c8;
+}
+
+.add-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  color: #0b47c1;
+}
+
+.child-container {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 12px;
+}
+
+.child-container h2 {
+  margin: 0 0 10px;
+  color: black;
+}
+
+.items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.empty-message {
+  margin: 8px 0;
+  color: red;
+}
