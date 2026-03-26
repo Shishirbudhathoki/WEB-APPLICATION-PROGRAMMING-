@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Users List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f0f4f8;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+
+      .header p {
+        font-size: 13px;
+        color: #888;
+        margin-top: 2px;
+      }
+
+      .register-btn {
+        padding: 10px 20px;
+        background: #4f8ef7;
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+
+      .register-btn:hover {
+        background: #2f72e8;
+      }
+
+      .count-badge {
+        display: inline-block;
+        background: #e8f0fe;
+        color: #2f72e8;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-top: 6px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background: #f7f9fc;
+      }
+
+      thead th {
+        padding: 14px 20px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #888;
+        text-align: left;
+        border-bottom: 1.5px solid #eee;
+      }
+
+      tbody tr {
+        transition: background 0.15s;
+      }
+
+      tbody tr:hover {
+        background: #f7f9fc;
+      }
+
+      tbody td {
+        padding: 14px 20px;
+        font-size: 14px;
+        color: #1a1a2e;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #e8f0fe;
+        color: #2f72e8;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .gender-badge {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+
+      .gender-male {
+        background: #e8f0fe;
+        color: #2f72e8;
+      }
+
+      .gender-female {
+        background: #fce8f3;
+        color: #c2185b;
+      }
+
+      .gender-other {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+
+      .empty {
+        text-align: center;
+        padding: 60px 20px;
+        color: #aaa;
+        font-size: 15px;
+      }
+
+      .empty span {
+        display: block;
+        font-size: 36px;
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <h1>Registered Users</h1>
+          <span class="count-badge"
+            >{{ users.count }} user{{ users.count|pluralize }}</span
+          >
+        </div>
+        <a href="{% url 'register' %}" class="register-btn"
+          >+ Register New User</a
+        >
+      </div>
+
+      <div class="card">
+        {% if users %}
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in users %}
+            <tr>
+              <td>
+                <span class="avatar">{{ user.name|slice:":1"|upper }}</span>
+                {{ user.name }}
+              </td>
+              <td>@{{ user.username }}</td>
+              <td>{{ user.age }}</td>
+              <td>
+                <span
+                  class="gender-badge {% if user.gender == 'Male' %}gender-male {% elif user.gender == 'Female' %}gender-female {% else %}gender-other{% endif %}"
+                >
+                  {{ user.gender }}
+                </span>
+              </td>
+              <td>{{ user.email }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <div class="empty">
+          <span>👤</span>
+          No users registered yet. Be the first one!
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
